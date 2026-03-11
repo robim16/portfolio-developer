@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -10,29 +11,56 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const projects = [
   {
-    title: 'Nexus Empresarial',
-    description: 'Sistema de planificación de recursos empresariales a gran escala con flujos de trabajo complejos e informes en tiempo real.',
-    techs: ['Laravel', 'Vue', 'PostgreSQL'],
+    title: 'TechNova E-commerce',
+    description: 'Plataforma de comercio electrónico de alto rendimiento desarrollada con NestJS y NextJS, optimizada con asistencia de IA mediante Cursor para una experiencia de usuario fluida.',
+    techs: ['Nestjs', 'Next', 'Cursor'],
     image: PlaceHolderImages[1].imageUrl,
     hint: PlaceHolderImages[1].imageHint,
     link: '#',
     repo: '#'
   },
   {
-    title: 'CloudFlow CRM',
-    description: 'Plataforma CRM moderna que presenta puntuación automatizada de clientes potenciales e ideas impulsadas por IA.',
-    techs: ['Next', 'Nestjs', 'PostgreSQL', 'ChatGPT'],
+    title: 'Ticker Manager',
+    description: 'Sistema integral de gestión de tickets con manejo de roles y autenticación robusta. Arquitectura desacoplada con backend en NestJS y frontend en Angular.',
+    techs: ['Nestjs', 'Angular', 'PostgreSQL'],
     image: PlaceHolderImages[2].imageUrl,
     hint: PlaceHolderImages[2].imageHint,
     link: '#',
     repo: '#'
   },
   {
-    title: 'Fintech Core',
-    description: 'Arquitectura de microservicios altamente segura para manejar transacciones multimoneda y auditoría.',
-    techs: ['Spring', '.Net', 'PostgreSQL'],
+    title: 'Spring Cloud Microservices',
+    description: 'Arquitectura de microservicios escalable utilizando Spring Boot, Docker, Kubernetes y monitoreo avanzado con Grafana para alta disponibilidad.',
+    techs: ['Spring', 'Docker', 'Kubernetes'],
     image: PlaceHolderImages[3].imageUrl,
     hint: PlaceHolderImages[3].imageHint,
+    link: '#',
+    repo: '#'
+  },
+  {
+    title: 'Crediya Microservices',
+    description: 'Ecosistema de microservicios para la gestión de solicitudes financieras y autenticación de usuarios, implementado con estándares bancarios.',
+    techs: ['Spring', 'MySQL', 'Docker'],
+    image: PlaceHolderImages[5].imageUrl,
+    hint: PlaceHolderImages[5].imageHint,
+    link: '#',
+    repo: '#'
+  },
+  {
+    title: 'Hi-Beauty E-commerce',
+    description: 'Tienda online especializada en productos de belleza con un enfoque en diseño visual impactante y rendimiento SEO.',
+    techs: ['Next', 'PostgreSQL', 'Tailwind'],
+    image: PlaceHolderImages[4].imageUrl,
+    hint: PlaceHolderImages[4].imageHint,
+    link: '#',
+    repo: '#'
+  },
+  {
+    title: 'Laravel Inertia SSR',
+    description: 'Aplicación web moderna utilizando Laravel con Inertia.js para Renderizado en el Lado del Servidor (SSR), combinando potencia backend y agilidad frontend.',
+    techs: ['Laravel', 'Vue', 'MySQL'],
+    image: PlaceHolderImages[6].imageUrl,
+    hint: PlaceHolderImages[6].imageHint,
     link: '#',
     repo: '#'
   }

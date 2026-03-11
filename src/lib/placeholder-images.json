@@ -7,22 +7,40 @@
       "imageHint": "abstract geometric"
     },
     {
-      "id": "project-laravel",
-      "description": "Enterprise E-commerce Platform built with Laravel",
-      "imageUrl": "https://picsum.photos/seed/laravel-proj/600/400",
-      "imageHint": "software code"
+      "id": "project-technova",
+      "description": "TechNova E-commerce NestJS NextJS",
+      "imageUrl": "https://picsum.photos/seed/technova/600/400",
+      "imageHint": "ecommerce shop"
     },
     {
-      "id": "project-nextjs",
-      "description": "Modern SaaS Dashboard with Next.js",
-      "imageUrl": "https://picsum.photos/seed/nextjs-proj/600/400",
-      "imageHint": "dashboard ui"
+      "id": "project-ticker",
+      "description": "Ticker Manager NestJS Angular",
+      "imageUrl": "https://picsum.photos/seed/ticker/600/400",
+      "imageHint": "dashboard software"
     },
     {
-      "id": "project-spring",
-      "description": "Banking Microservices with Spring Boot",
-      "imageUrl": "https://picsum.photos/seed/spring-proj/600/400",
-      "imageHint": "server architecture"
+      "id": "project-spring-cloud",
+      "description": "Spring Microservices Docker Kubernetes",
+      "imageUrl": "https://picsum.photos/seed/spring-cloud/600/400",
+      "imageHint": "cloud server"
+    },
+    {
+      "id": "project-beauty",
+      "description": "Hi Beauty E-commerce",
+      "imageUrl": "https://picsum.photos/seed/beauty/600/400",
+      "imageHint": "cosmetics website"
+    },
+    {
+      "id": "project-crediya",
+      "description": "Crediya Microservices",
+      "imageUrl": "https://picsum.photos/seed/crediya/600/400",
+      "imageHint": "financial app"
+    },
+    {
+      "id": "project-laravel-ssr",
+      "description": "Laravel Inertia SSR",
+      "imageUrl": "https://picsum.photos/seed/laravel-ssr/600/400",
+      "imageHint": "web development"
     }
   ]
 }

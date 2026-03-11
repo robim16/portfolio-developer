@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -25,9 +26,21 @@ const experiences = [
 ];
 
 const skillCategories = [
-  { name: 'Lenguajes y Frameworks', icon: <Code className="w-5 h-5" />, items: ['Laravel', 'Vue', 'Spring', 'Angular', 'Next', 'Django', '.Net', 'Nestjs'] },
-  { name: 'Bases de Datos', icon: <Database className="w-5 h-5" />, items: ['PostgreSQL', 'MySQL', 'SQL Server', 'MongoDB'] },
-  { name: 'Herramientas de IA', icon: <Cpu className="w-5 h-5" />, items: ['Cursor', 'Claude', 'Gemini', 'ChatGPT'] }
+  { 
+    name: 'Lenguajes y Frameworks', 
+    icon: <Code className="w-5 h-5" />, 
+    items: ['Laravel', 'Vue', 'Spring', 'Angular', 'Next', 'Django', '.Net', 'Nestjs', 'React'] 
+  },
+  { 
+    name: 'Bases de Datos', 
+    icon: <Database className="w-5 h-5" />, 
+    items: ['MySQL', 'SQL Server', 'MongoDB', 'PostgreSQL'] 
+  },
+  { 
+    name: 'Infraestructura y Herramientas', 
+    icon: <Cpu className="w-5 h-5" />, 
+    items: ['Docker', 'Kubernetes', 'Cursor', 'Claude', 'Gemini', 'ChatGPT'] 
+  }
 ];
 
 export function ExperienceTimeline() {

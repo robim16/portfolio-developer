@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { 
@@ -10,7 +11,10 @@ import {
   Coffee, 
   Framer,
   Layout,
-  Zap
+  Zap,
+  Box,
+  Cloud,
+  Atom
 } from 'lucide-react';
 
 const techMap: Record<string, { icon: React.ReactNode; color: string }> = {
@@ -19,6 +23,7 @@ const techMap: Record<string, { icon: React.ReactNode; color: string }> = {
   'Spring': { icon: <Coffee className="w-4 h-4" />, color: 'bg-green-600' },
   'Angular': { icon: <Globe className="w-4 h-4" />, color: 'bg-red-600' },
   'Next': { icon: <Layers className="w-4 h-4" />, color: 'bg-black' },
+  'React': { icon: <Atom className="w-4 h-4" />, color: 'bg-blue-400' },
   'Django': { icon: <Code2 className="w-4 h-4" />, color: 'bg-green-800' },
   '.Net': { icon: <Cpu className="w-4 h-4" />, color: 'bg-purple-600' },
   'Nestjs': { icon: <Zap className="w-4 h-4" />, color: 'bg-red-500' },
@@ -26,6 +31,8 @@ const techMap: Record<string, { icon: React.ReactNode; color: string }> = {
   'MySQL': { icon: <Database className="w-4 h-4" />, color: 'bg-blue-500' },
   'SQL Server': { icon: <Database className="w-4 h-4" />, color: 'bg-red-700' },
   'MongoDB': { icon: <Database className="w-4 h-4" />, color: 'bg-green-700' },
+  'Docker': { icon: <Box className="w-4 h-4" />, color: 'bg-blue-600' },
+  'Kubernetes': { icon: <Cloud className="w-4 h-4" />, color: 'bg-blue-700' },
   'Cursor': { icon: <Framer className="w-4 h-4" />, color: 'bg-blue-400' },
   'Claude': { icon: <Cpu className="w-4 h-4" />, color: 'bg-orange-400' },
   'Gemini': { icon: <Zap className="w-4 h-4" />, color: 'bg-blue-500' },
