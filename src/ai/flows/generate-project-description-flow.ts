@@ -1,10 +1,6 @@
 'use server';
 /**
- * @fileOverview A Genkit flow to generate initial project descriptions and identify key technologies.
- *
- * - generateProjectDescription - A function that handles the project description generation process.
- * - GenerateProjectDescriptionInput - The input type for the generateProjectDescription function.
- * - GenerateProjectDescriptionOutput - The return type for the generateProjectDescription function.
+ * @fileOverview Un flujo de Genkit para generar descripciones iniciales de proyectos e identificar tecnologías clave.
  */
 
 import { ai } from '@/ai/genkit';
@@ -16,16 +12,16 @@ const GenerateProjectDescriptionInputSchema = z
       .string()
       .optional()
       .describe(
-        'Optional GitHub repository metadata, such as repository name, description, and primary language.'
+        'Metadatos opcionales del repositorio de GitHub, como el nombre del repositorio, la descripción y el lenguaje principal.'
       ),
     projectSummary: z
       .string()
       .optional()
-      .describe('A brief summary of the project.'),
+      .describe('Un breve resumen del proyecto.'),
   })
   .refine(
     data => data.githubRepoMetadata || data.projectSummary,
-    'Either githubRepoMetadata or projectSummary must be provided.'
+    'Debe proporcionarse githubRepoMetadata o projectSummary.'
   );
 
 export type GenerateProjectDescriptionInput = z.infer<
@@ -35,10 +31,10 @@ export type GenerateProjectDescriptionInput = z.infer<
 const GenerateProjectDescriptionOutputSchema = z.object({
   description: z
     .string()
-    .describe('A detailed and engaging description of the project.'),
+    .describe('Una descripción detallada y atractiva del proyecto en español.'),
   technologies: z
     .array(z.string())
-    .describe('A list of key technologies used in the project.'),
+    .describe('Una lista de tecnologías clave utilizadas en el proyecto.'),
 });
 
 export type GenerateProjectDescriptionOutput = z.infer<
@@ -61,6 +57,9 @@ const technologyList = [
   '.Net',
   'Nestjs',
   'PostgreSQL',
+  'MySQL',
+  'SQL Server',
+  'MongoDB',
   'Cursor',
   'Claude',
   'Gemini',
@@ -71,21 +70,21 @@ const prompt = ai.definePrompt({
   name: 'generateProjectDescriptionPrompt',
   input: { schema: GenerateProjectDescriptionInputSchema },
   output: { schema: GenerateProjectDescriptionOutputSchema },
-  prompt: `You are an AI assistant specialized in generating project descriptions for developer portfolios.
-Your task is to create a compelling project description and identify key technologies used in the project from the provided information.
+  prompt: `Eres un asistente de IA especializado en generar descripciones de proyectos para portafolios de desarrolladores.
+Tu tarea es crear una descripción de proyecto convincente y profesional en español, e identificar las tecnologías clave utilizadas en el proyecto a partir de la información proporcionada.
 
-Here is the information about the project:
+Aquí está la información sobre el proyecto:
 {{#if githubRepoMetadata}}
-GitHub Repository Metadata: {{{githubRepoMetadata}}}
+Metadatos del Repositorio de GitHub: {{{githubRepoMetadata}}}
 {{/if}}
 {{#if projectSummary}}
-Project Summary: {{{projectSummary}}}
+Resumen del Proyecto: {{{projectSummary}}}
 {{/if}}
 
-Identify technologies from the following list: ${technologyList}.
-Only include technologies from this list that are explicitly mentioned or strongly implied by the provided project information.
+Identifica las tecnologías de la siguiente lista: ${technologyList}.
+Solo incluye tecnologías de esta lista que estén mencionadas explícitamente o fuertemente implicadas por la información del proyecto proporcionada.
 
-Generate a project description that highlights the project's purpose, features, and impact.`,
+Genera una descripción del proyecto que resalte el propósito del proyecto, las características y el impacto. TODO EL TEXTO DEBE ESTAR EN ESPAÑOL.`,
 });
 
 const generateProjectDescriptionFlow = ai.defineFlow(

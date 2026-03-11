@@ -23,8 +23,8 @@ export function AIProjectAssistant() {
     if (!summary && !repoMetadata) {
       toast({
         variant: "destructive",
-        title: "Input required",
-        description: "Please provide either a project summary or repo metadata."
+        title: "Entrada requerida",
+        description: "Por favor, proporciona un resumen del proyecto o metadatos del repositorio."
       });
       return;
     }
@@ -40,7 +40,7 @@ export function AIProjectAssistant() {
       toast({
         variant: "destructive",
         title: "Error",
-        description: "Failed to generate description. Please try again."
+        description: "Error al generar la descripción. Por favor, inténtalo de nuevo."
       });
     } finally {
       setLoading(false);
@@ -53,8 +53,8 @@ export function AIProjectAssistant() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
       toast({
-        title: "Copied!",
-        description: "Description copied to clipboard."
+        title: "¡Copiado!",
+        description: "Descripción copiada al portapapeles."
       });
     }
   };
@@ -65,28 +65,28 @@ export function AIProjectAssistant() {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-2xl font-headline">
           <Sparkles className="w-6 h-6 text-primary fill-primary/20" />
-          AI Project Assistant
+          Asistente de Proyectos IA
         </CardTitle>
         <CardDescription>
-          Generate professional descriptions and identify tech stacks for your new projects.
+          Genera descripciones profesionales e identifica stacks tecnológicos para tus nuevos proyectos.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="space-y-2">
-          <Label htmlFor="summary">Brief Summary</Label>
+          <Label htmlFor="summary">Breve Resumen</Label>
           <Textarea 
             id="summary"
-            placeholder="e.g. A real-time chat application using WebSockets and a clean UI..."
+            placeholder="ej. Una aplicación de chat en tiempo real usando WebSockets y una UI limpia..."
             value={summary}
             onChange={(e) => setSummary(e.target.value)}
             className="min-h-[100px] resize-none focus:ring-primary"
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="metadata">Repository Metadata (Optional)</Label>
+          <Label htmlFor="metadata">Metadatos del Repositorio (Opcional)</Label>
           <Input 
             id="metadata"
-            placeholder="e.g. repo-name: chat-app, stars: 12, lang: TypeScript"
+            placeholder="ej. repo-name: chat-app, stars: 12, lang: TypeScript"
             value={repoMetadata}
             onChange={(e) => setRepoMetadata(e.target.value)}
             className="focus:ring-primary"
@@ -96,14 +96,14 @@ export function AIProjectAssistant() {
         {result && (
           <div className="mt-8 space-y-4 p-4 rounded-lg bg-secondary/50 border border-border animate-in fade-in slide-in-from-bottom-2">
             <div className="flex justify-between items-start">
-              <h4 className="font-semibold text-sm uppercase tracking-widest text-muted-foreground">Generated Description</h4>
+              <h4 className="font-semibold text-sm uppercase tracking-widest text-muted-foreground">Descripción Generada</h4>
               <Button variant="ghost" size="icon" onClick={copyToClipboard}>
                 {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
               </Button>
             </div>
             <p className="text-sm leading-relaxed whitespace-pre-wrap">{result.description}</p>
             <div className="space-y-2">
-              <h4 className="font-semibold text-sm uppercase tracking-widest text-muted-foreground">Identified Technologies</h4>
+              <h4 className="font-semibold text-sm uppercase tracking-widest text-muted-foreground">Tecnologías Identificadas</h4>
               <div className="flex flex-wrap gap-2">
                 {result.technologies.map((tech) => (
                   <TechIcon key={tech} tech={tech} />
@@ -122,12 +122,12 @@ export function AIProjectAssistant() {
           {loading ? (
             <>
               <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-              Generating...
+              Generando...
             </>
           ) : (
             <>
               <RefreshCw className="mr-2 h-5 w-5 group-hover:rotate-180 transition-transform duration-500" />
-              {result ? 'Regenerate' : 'Generate Project Content'}
+              {result ? 'Regenerar' : 'Generar Contenido del Proyecto'}
             </>
           )}
         </Button>

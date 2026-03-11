@@ -19,15 +19,15 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col items-center text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
             <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 px-4 py-1.5 rounded-full text-primary font-bold text-sm tracking-wide uppercase">
-              <Zap className="w-4 h-4 fill-primary" /> Available for new projects
+              <Zap className="w-4 h-4 fill-primary" /> Disponible para nuevos proyectos
             </div>
             
             <h1 className="text-5xl md:text-8xl font-headline font-black tracking-tight leading-[1.1] max-w-4xl">
-              Elevating Ideas through <span className="text-accent underline decoration-primary decoration-8 underline-offset-4">Digital Craft</span>
+              Elevando Ideas a través de la <span className="text-accent underline decoration-primary decoration-8 underline-offset-4">Artesanía Digital</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
-              Hello, I'm <span className="font-bold text-foreground">Carlos Arteaga Jimenez</span>. I architect high-performance fullstack applications with modern tech stacks.
+              Hola, soy <span className="font-bold text-foreground">Carlos Arteaga Jimenez</span>. Arquitecto de aplicaciones fullstack de alto rendimiento con stacks tecnológicos modernos.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -48,10 +48,10 @@ export default function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="space-y-4">
               <div className="flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-sm">
-                <Layers className="w-4 h-4" /> Portfolio
+                <Layers className="w-4 h-4" /> Portafolio
               </div>
               <h2 className="text-4xl md:text-5xl font-headline font-black tracking-tight">
-                Featured Projects
+                Proyectos Destacados
               </h2>
             </div>
             <Button variant="link" className="text-primary font-bold text-lg group p-0" asChild>
@@ -74,10 +74,10 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-4 mb-16">
             <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-sm">
-              <Code className="w-4 h-4" /> Expertise
+              <Code className="w-4 h-4" /> Experiencia
             </div>
             <h2 className="text-4xl md:text-5xl font-headline font-black tracking-tight">
-              Skills & Experience
+              Habilidades y Trayectoria
             </h2>
           </div>
           
@@ -97,10 +97,10 @@ export default function Home() {
         <div className="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-2 text-center md:text-left">
             <h3 className="text-2xl font-headline font-black tracking-tighter text-primary">
-              DevSphere <span className="text-accent">by Carlos</span>
+              DevSphere <span className="text-accent">por Carlos</span>
             </h3>
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Carlos Arteaga Jimenez. Crafted with Passion.
+              © {new Date().getFullYear()} Carlos Arteaga Jimenez. Creado con Pasión.
             </p>
           </div>
           <div className="flex items-center gap-6">

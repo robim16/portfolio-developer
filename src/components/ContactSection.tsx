@@ -13,10 +13,10 @@ export function ContactSection() {
       <div className="space-y-8">
         <div className="space-y-4">
           <h2 className="text-4xl md:text-5xl font-headline font-bold leading-tight">
-            Ready to build something <span className="text-accent">extraordinary?</span>
+            ¿Listo para construir algo <span className="text-accent">extraordinario?</span>
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-            I'm currently available for freelance projects and full-time opportunities. Let's talk about your vision.
+            Estoy disponible para proyectos freelance y oportunidades a tiempo completo. Hablemos de tu visión.
           </p>
         </div>
 
@@ -26,8 +26,8 @@ export function ContactSection() {
               <Mail className="w-6 h-6" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-muted-foreground">Email me at</p>
-              <a href="mailto:carlos@example.com" className="text-lg font-bold hover:text-accent transition-colors">carlos.aj@devsphere.com</a>
+              <p className="text-sm font-semibold text-muted-foreground">Envíame un correo a</p>
+              <a href="mailto:carlos.aj@devsphere.com" className="text-lg font-bold hover:text-accent transition-colors">carlos.aj@devsphere.com</a>
             </div>
           </div>
           
@@ -50,24 +50,24 @@ export function ContactSection() {
         <CardContent className="p-8 space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <label className="text-sm font-bold ml-1">Name</label>
-              <Input placeholder="John Doe" className="bg-background/50 focus:ring-primary" />
+              <label className="text-sm font-bold ml-1">Nombre</label>
+              <Input placeholder="Juan Pérez" className="bg-background/50 focus:ring-primary" />
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-bold ml-1">Email</label>
-              <Input placeholder="john@example.com" className="bg-background/50 focus:ring-primary" />
+              <label className="text-sm font-bold ml-1">Correo Electrónico</label>
+              <Input placeholder="juan@ejemplo.com" className="bg-background/50 focus:ring-primary" />
             </div>
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-bold ml-1">Subject</label>
-            <Input placeholder="Project Inquiry" className="bg-background/50 focus:ring-primary" />
+            <label className="text-sm font-bold ml-1">Asunto</label>
+            <Input placeholder="Consulta de Proyecto" className="bg-background/50 focus:ring-primary" />
           </div>
           <div className="space-y-2">
-            <label className="text-sm font-bold ml-1">Message</label>
-            <Textarea placeholder="Tell me more about your project..." className="min-h-[150px] bg-background/50 focus:ring-primary" />
+            <label className="text-sm font-bold ml-1">Mensaje</label>
+            <Textarea placeholder="Cuéntame más sobre tu proyecto..." className="min-h-[150px] bg-background/50 focus:ring-primary" />
           </div>
           <Button className="w-full h-12 bg-accent hover:bg-accent/90 text-white font-bold text-lg shadow-lg hover:shadow-accent/20 transition-all">
-            <Send className="mr-2 h-5 w-5" /> Send Message
+            <Send className="mr-2 h-5 w-5" /> Enviar Mensaje
           </Button>
         </CardContent>
       </Card>

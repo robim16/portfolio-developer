@@ -9,25 +9,25 @@ const experiences = [
   {
     company: 'Cosmmotech',
     role: 'Senior Fullstack Developer',
-    period: '2022 - Present',
-    location: 'Remote',
-    description: 'Leading development of modular web architectures and integrating AI workflows to optimize developer productivity.',
+    period: '2022 - Presente',
+    location: 'Remoto',
+    description: 'Liderando el desarrollo de arquitecturas web modulares e integrando flujos de trabajo de IA para optimizar la productividad de los desarrolladores.',
     skills: ['Next', 'Nestjs', 'PostgreSQL', 'Claude']
   },
   {
     company: 'DyD Soluciones',
     role: 'Fullstack Developer',
     period: '2020 - 2022',
-    location: 'Hybrid',
-    description: 'Built scalable backend systems for logistics management using Laravel and Vue, reducing operational costs by 20%.',
+    location: 'Híbrido',
+    description: 'Desarrollo de sistemas backend escalables para la gestión logística utilizando Laravel y Vue, reduciendo los costos operativos en un 20%.',
     skills: ['Laravel', 'Vue', 'PostgreSQL', '.Net']
   }
 ];
 
 const skillCategories = [
-  { name: 'Languages & Frameworks', icon: <Code className="w-5 h-5" />, items: ['Laravel', 'Vue', 'Spring', 'Angular', 'Next', 'Django', '.Net', 'Nestjs'] },
-  { name: 'Databases', icon: <Database className="w-5 h-5" />, items: ['PostgreSQL'] },
-  { name: 'AI Tools', icon: <Cpu className="w-5 h-5" />, items: ['Cursor', 'Claude', 'Gemini', 'ChatGPT'] }
+  { name: 'Lenguajes y Frameworks', icon: <Code className="w-5 h-5" />, items: ['Laravel', 'Vue', 'Spring', 'Angular', 'Next', 'Django', '.Net', 'Nestjs'] },
+  { name: 'Bases de Datos', icon: <Database className="w-5 h-5" />, items: ['PostgreSQL', 'MySQL', 'SQL Server', 'MongoDB'] },
+  { name: 'Herramientas de IA', icon: <Cpu className="w-5 h-5" />, items: ['Cursor', 'Claude', 'Gemini', 'ChatGPT'] }
 ];
 
 export function ExperienceTimeline() {
@@ -36,7 +36,7 @@ export function ExperienceTimeline() {
       <div className="space-y-8">
         <h3 className="text-2xl font-headline font-bold flex items-center gap-2 mb-6">
           <Briefcase className="w-6 h-6 text-accent" />
-          Professional Journey
+          Trayectoria Profesional
         </h3>
         <div className="space-y-6 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-0.5 before:bg-primary/30">
           {experiences.map((exp, idx) => (
@@ -68,7 +68,7 @@ export function ExperienceTimeline() {
       <div className="space-y-8">
         <h3 className="text-2xl font-headline font-bold flex items-center gap-2 mb-6">
           <Sparkles className="w-6 h-6 text-primary" />
-          Technical Arsenal
+          Arsenal Técnico
         </h3>
         <div className="grid grid-cols-1 gap-6">
           {skillCategories.map((cat, idx) => (

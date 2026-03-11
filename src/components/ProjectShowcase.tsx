@@ -10,8 +10,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const projects = [
   {
-    title: 'Nexus Enterprise',
-    description: 'An enterprise-scale resource planning system with complex workflows and real-time reporting.',
+    title: 'Nexus Empresarial',
+    description: 'Sistema de planificación de recursos empresariales a gran escala con flujos de trabajo complejos e informes en tiempo real.',
     techs: ['Laravel', 'Vue', 'PostgreSQL'],
     image: PlaceHolderImages[1].imageUrl,
     hint: PlaceHolderImages[1].imageHint,
@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'CloudFlow CRM',
-    description: 'A modern CRM platform featuring automated lead scoring and AI-driven customer insights.',
+    description: 'Plataforma CRM moderna que presenta puntuación automatizada de clientes potenciales e ideas impulsadas por IA.',
     techs: ['Next', 'Nestjs', 'PostgreSQL', 'ChatGPT'],
     image: PlaceHolderImages[2].imageUrl,
     hint: PlaceHolderImages[2].imageHint,
@@ -29,7 +29,7 @@ const projects = [
   },
   {
     title: 'Fintech Core',
-    description: 'Highly secure microservices architecture for handling multi-currency transactions and auditing.',
+    description: 'Arquitectura de microservicios altamente segura para manejar transacciones multimoneda y auditoría.',
     techs: ['Spring', '.Net', 'PostgreSQL'],
     image: PlaceHolderImages[3].imageUrl,
     hint: PlaceHolderImages[3].imageHint,
@@ -55,12 +55,12 @@ export function ProjectShowcase() {
               <div className="flex gap-2">
                 <Button variant="secondary" size="sm" asChild>
                   <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                    <Github className="w-4 h-4" /> Code
+                    <Github className="w-4 h-4" /> Código
                   </a>
                 </Button>
                 <Button variant="default" size="sm" className="bg-primary text-primary-foreground" asChild>
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                    <ExternalLink className="w-4 h-4" /> Live
+                    <ExternalLink className="w-4 h-4" /> Demo
                   </a>
                 </Button>
               </div>
@@ -81,7 +81,7 @@ export function ProjectShowcase() {
           </CardContent>
           <CardFooter className="px-6 pb-6 pt-0 border-t border-transparent group-hover:border-primary/10 transition-colors">
              <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80 font-semibold flex items-center gap-1">
-                View Details <ArrowUpRight className="w-4 h-4" />
+                Ver Detalles <ArrowUpRight className="w-4 h-4" />
              </Button>
           </CardFooter>
         </Card>
