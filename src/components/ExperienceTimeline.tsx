@@ -9,7 +9,7 @@ import { Briefcase, Calendar, MapPin, Code, Cpu, Database, Sparkles } from 'luci
 const experiences = [
   {
     company: 'Cosmmotech',
-    role: 'Senior Fullstack Developer',
+    role: 'Desarrollador Fullstack Senior',
     period: '2022 - Presente',
     location: 'Remoto',
     description: 'Liderando el desarrollo de arquitecturas web modulares e integrando flujos de trabajo de IA para optimizar la productividad de los desarrolladores.',
@@ -17,7 +17,7 @@ const experiences = [
   },
   {
     company: 'DyD Soluciones',
-    role: 'Fullstack Developer',
+    role: 'Desarrollador Fullstack',
     period: '2020 - 2022',
     location: 'Híbrido',
     description: 'Desarrollo de sistemas backend escalables para la gestión logística utilizando Laravel y Vue, reduciendo los costos operativos en un 20%.',

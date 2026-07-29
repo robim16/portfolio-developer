@@ -38,20 +38,20 @@ const projects = [
     repo: '#'
   },
   {
-    title: 'Crediya Microservices',
-    description: 'Ecosistema de microservicios para la gestión de solicitudes financieras y autenticación de usuarios, implementado con estándares bancarios.',
-    techs: ['Spring', 'MySQL', 'Docker'],
-    image: PlaceHolderImages[5].imageUrl,
-    hint: PlaceHolderImages[5].imageHint,
+    title: 'Airbnb Clone (Fullstack)',
+    description: 'Clon completo de Airbnb con funcionalidades de reserva, gestión de propiedades y mapas interactivos, utilizando arquitecturas modernas para escalabilidad.',
+    techs: ['Next', 'Nestjs', 'MongoDB'],
+    image: PlaceHolderImages[7].imageUrl,
+    hint: PlaceHolderImages[7].imageHint,
     link: '#',
     repo: '#'
   },
   {
-    title: 'Hi-Beauty E-commerce',
-    description: 'Tienda online especializada en productos de belleza con un enfoque en diseño visual impactante y rendimiento SEO.',
-    techs: ['Next', 'PostgreSQL', 'Tailwind'],
-    image: PlaceHolderImages[4].imageUrl,
-    hint: PlaceHolderImages[4].imageHint,
+    title: 'Crediya Microservices',
+    description: 'Ecosistema de microservicios para la gestión de solicitudes financieras y autenticación de usuarios, implementado con estándares bancarios de seguridad.',
+    techs: ['Spring', 'MySQL', 'Docker'],
+    image: PlaceHolderImages[5].imageUrl,
+    hint: PlaceHolderImages[5].imageHint,
     link: '#',
     repo: '#'
   },
@@ -61,6 +61,24 @@ const projects = [
     techs: ['Laravel', 'Vue', 'MySQL'],
     image: PlaceHolderImages[6].imageUrl,
     hint: PlaceHolderImages[6].imageHint,
+    link: '#',
+    repo: '#'
+  },
+  {
+    title: 'Patient Management System',
+    description: 'Sistema de gestión de pacientes desarrollado con Spring Boot, enfocado en la eficiencia operativa y seguridad de datos médicos.',
+    techs: ['Spring', 'SQL Server', 'Docker'],
+    image: PlaceHolderImages[8].imageUrl,
+    hint: PlaceHolderImages[8].imageHint,
+    link: '#',
+    repo: '#'
+  },
+  {
+    title: 'Social Book Django',
+    description: 'Red social completa desarrollada con Django, incluyendo flujos de amistad, publicaciones en tiempo real y perfiles personalizables.',
+    techs: ['Django', 'PostgreSQL', 'Tailwind'],
+    image: PlaceHolderImages[9].imageUrl,
+    hint: PlaceHolderImages[9].imageHint,
     link: '#',
     repo: '#'
   }

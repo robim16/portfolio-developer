@@ -41,6 +41,24 @@
       "description": "Laravel Inertia SSR",
       "imageUrl": "https://picsum.photos/seed/laravel-ssr/600/400",
       "imageHint": "web development"
+    },
+    {
+      "id": "project-airbnb",
+      "description": "Airbnb Clone Fullstack",
+      "imageUrl": "https://picsum.photos/seed/airbnb/600/400",
+      "imageHint": "real estate app"
+    },
+    {
+      "id": "project-patient",
+      "description": "Patient Management Spring",
+      "imageUrl": "https://picsum.photos/seed/patient/600/400",
+      "imageHint": "medical system"
+    },
+    {
+      "id": "project-django",
+      "description": "Social Book Django",
+      "imageUrl": "https://picsum.photos/seed/django-social/600/400",
+      "imageHint": "social network"
     }
   ]
 }

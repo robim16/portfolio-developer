@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code, Cpu, ExternalLink, Github, Layers, Zap, Linkedin, Twitter } from 'lucide-react';
@@ -14,7 +15,7 @@ export default function Home() {
       <DynamicBackground />
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Sección Hero */}
       <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-4 overflow-hidden">
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="flex flex-col items-center text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
@@ -42,7 +43,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Showcase */}
+      {/* Galería de Proyectos */}
       <section id="projects" className="py-24 px-4 bg-secondary/20 border-y border-primary/5">
         <div className="container mx-auto max-w-6xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -69,7 +70,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Experience & Skills */}
+      {/* Experiencia y Habilidades */}
       <section id="about" className="py-24 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="space-y-4 mb-16">
@@ -85,14 +86,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Sección de Contacto */}
       <section id="contact" className="py-24 px-4 bg-primary/5">
         <div className="container mx-auto max-w-6xl">
           <ContactSection />
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Pie de Página */}
       <footer className="py-12 px-4 border-t border-primary/10">
         <div className="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="space-y-2 text-center md:text-left">
