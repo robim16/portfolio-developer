@@ -7,15 +7,13 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { TechIcon } from './TechIcon';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
-
 const projects = [
   {
     title: 'TechNova E-commerce',
     description: 'Plataforma de comercio electrónico de alto rendimiento desarrollada con NestJS y NextJS, optimizada con asistencia de IA mediante Cursor para una experiencia de usuario fluida.',
     techs: ['Nestjs', 'Next', 'Cursor'],
-    image: PlaceHolderImages[1].imageUrl,
-    hint: PlaceHolderImages[1].imageHint,
+    image: '/projects/project-technova.png',
+    hint: 'ecommerce shop',
     link: '#',
     repo: '#'
   },
@@ -23,8 +21,8 @@ const projects = [
     title: 'Ticker Manager',
     description: 'Sistema integral de gestión de tickets con manejo de roles y autenticación robusta. Arquitectura desacoplada con backend en NestJS y frontend en Angular.',
     techs: ['Nestjs', 'Angular', 'PostgreSQL'],
-    image: PlaceHolderImages[2].imageUrl,
-    hint: PlaceHolderImages[2].imageHint,
+    image: '/projects/project-ticker.png',
+    hint: 'dashboard software',
     link: '#',
     repo: '#'
   },
@@ -32,8 +30,8 @@ const projects = [
     title: 'Spring Cloud Microservices',
     description: 'Arquitectura de microservicios escalable utilizando Spring Boot, Docker, Kubernetes y monitoreo avanzado con Grafana para alta disponibilidad.',
     techs: ['Spring', 'Docker', 'Kubernetes'],
-    image: PlaceHolderImages[3].imageUrl,
-    hint: PlaceHolderImages[3].imageHint,
+    image: '/projects/project-spring-cloud.png',
+    hint: 'cloud server',
     link: '#',
     repo: '#'
   },
@@ -41,8 +39,8 @@ const projects = [
     title: 'Airbnb Clone (Fullstack)',
     description: 'Clon completo de Airbnb con funcionalidades de reserva, gestión de propiedades y mapas interactivos, utilizando arquitecturas modernas para escalabilidad.',
     techs: ['Next', 'Nestjs', 'MongoDB'],
-    image: PlaceHolderImages[7].imageUrl,
-    hint: PlaceHolderImages[7].imageHint,
+    image: '/projects/project-airbnb.png',
+    hint: 'real estate app',
     link: '#',
     repo: '#'
   },
@@ -50,8 +48,8 @@ const projects = [
     title: 'Crediya Microservices',
     description: 'Ecosistema de microservicios para la gestión de solicitudes financieras y autenticación de usuarios, implementado con estándares bancarios de seguridad.',
     techs: ['Spring', 'MySQL', 'Docker'],
-    image: PlaceHolderImages[5].imageUrl,
-    hint: PlaceHolderImages[5].imageHint,
+    image: '/projects/project-crediya.png',
+    hint: 'financial app',
     link: '#',
     repo: '#'
   },
@@ -59,8 +57,8 @@ const projects = [
     title: 'Laravel Inertia SSR',
     description: 'Aplicación web moderna utilizando Laravel con Inertia.js para Renderizado en el Lado del Servidor (SSR), combinando potencia backend y agilidad frontend.',
     techs: ['Laravel', 'Vue', 'MySQL'],
-    image: PlaceHolderImages[6].imageUrl,
-    hint: PlaceHolderImages[6].imageHint,
+    image: '/projects/project-laravel-ssr.png',
+    hint: 'web development',
     link: '#',
     repo: '#'
   },
@@ -68,8 +66,8 @@ const projects = [
     title: 'Patient Management System',
     description: 'Sistema de gestión de pacientes desarrollado con Spring Boot, enfocado en la eficiencia operativa y seguridad de datos médicos.',
     techs: ['Spring', 'SQL Server', 'Docker'],
-    image: PlaceHolderImages[8].imageUrl,
-    hint: PlaceHolderImages[8].imageHint,
+    image: '/projects/project-patient.png',
+    hint: 'medical system',
     link: '#',
     repo: '#'
   },
@@ -77,8 +75,8 @@ const projects = [
     title: 'Social Book Django',
     description: 'Red social completa desarrollada con Django, incluyendo flujos de amistad, publicaciones en tiempo real y perfiles personalizables.',
     techs: ['Django', 'PostgreSQL', 'Tailwind'],
-    image: PlaceHolderImages[9].imageUrl,
-    hint: PlaceHolderImages[9].imageHint,
+    image: '/projects/project-django.png',
+    hint: 'social network',
     link: '#',
     repo: '#'
   }
