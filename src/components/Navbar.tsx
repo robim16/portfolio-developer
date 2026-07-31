@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -8,6 +10,8 @@ import { cn } from '@/lib/utils';
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +22,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'Inicio', href: '#hero' },
-    { name: 'Proyectos', href: '#projects' },
-    { name: 'Habilidades', href: '#about' },
-    { name: 'Contacto', href: '#contact' },
+    { name: 'Inicio', href: isHome ? '#hero' : '/#hero' },
+    { name: 'Proyectos', href: isHome ? '#projects' : '/#projects' },
+    { name: 'Habilidades', href: isHome ? '#about' : '/#about' },
+    { name: 'Contacto', href: isHome ? '#contact' : '/#contact' },
   ];
 
   return (
@@ -30,14 +34,14 @@ export function Navbar() {
       scrolled ? "py-3 bg-white/70 backdrop-blur-lg shadow-md" : "bg-transparent"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center font-black text-xl text-primary-foreground shadow-lg shadow-primary/20">
             D
           </div>
           <span className="text-xl font-headline font-black tracking-tighter">
             DevSphere <span className="text-accent">Carlos</span>
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">

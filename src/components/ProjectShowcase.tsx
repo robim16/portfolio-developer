@@ -1,92 +1,19 @@
-
 "use client";
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { TechIcon } from './TechIcon';
-const projects = [
-  {
-    title: 'TechNova E-commerce',
-    description: 'Plataforma de comercio electrónico de alto rendimiento desarrollada con NestJS y NextJS, optimizada con asistencia de IA mediante Cursor para una experiencia de usuario fluida.',
-    techs: ['Nestjs', 'Next', 'Cursor'],
-    image: '/projects/project-technova.png',
-    hint: 'ecommerce shop',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Ticker Manager',
-    description: 'Sistema integral de gestión de tickets con manejo de roles y autenticación robusta. Arquitectura desacoplada con backend en NestJS y frontend en Angular.',
-    techs: ['Nestjs', 'Angular', 'PostgreSQL'],
-    image: '/projects/project-ticker.png',
-    hint: 'dashboard software',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Spring Cloud Microservices',
-    description: 'Arquitectura de microservicios escalable utilizando Spring Boot, Docker, Kubernetes y monitoreo avanzado con Grafana para alta disponibilidad.',
-    techs: ['Spring', 'Docker', 'Kubernetes'],
-    image: '/projects/project-spring-cloud.png',
-    hint: 'cloud server',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Airbnb Clone (Fullstack)',
-    description: 'Clon completo de Airbnb con funcionalidades de reserva, gestión de propiedades y mapas interactivos, utilizando arquitecturas modernas para escalabilidad.',
-    techs: ['Next', 'Nestjs', 'MongoDB'],
-    image: '/projects/project-airbnb.png',
-    hint: 'real estate app',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Crediya Microservices',
-    description: 'Ecosistema de microservicios para la gestión de solicitudes financieras y autenticación de usuarios, implementado con estándares bancarios de seguridad.',
-    techs: ['Spring', 'MySQL', 'Docker'],
-    image: '/projects/project-crediya.png',
-    hint: 'financial app',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Laravel Inertia SSR',
-    description: 'Aplicación web moderna utilizando Laravel con Inertia.js para Renderizado en el Lado del Servidor (SSR), combinando potencia backend y agilidad frontend.',
-    techs: ['Laravel', 'Vue', 'MySQL'],
-    image: '/projects/project-laravel-ssr.png',
-    hint: 'web development',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Patient Management System',
-    description: 'Sistema de gestión de pacientes desarrollado con Spring Boot, enfocado en la eficiencia operativa y seguridad de datos médicos.',
-    techs: ['Spring', 'SQL Server', 'Docker'],
-    image: '/projects/project-patient.png',
-    hint: 'medical system',
-    link: '#',
-    repo: '#'
-  },
-  {
-    title: 'Social Book Django',
-    description: 'Red social completa desarrollada con Django, incluyendo flujos de amistad, publicaciones en tiempo real y perfiles personalizables.',
-    techs: ['Django', 'PostgreSQL', 'Tailwind'],
-    image: '/projects/project-django.png',
-    hint: 'social network',
-    link: '#',
-    repo: '#'
-  }
-];
+import { projects } from '@/lib/projects';
 
 export function ProjectShowcase() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {projects.map((project, idx) => (
-        <Card key={idx} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md">
+      {projects.map((project) => (
+        <Card key={project.slug} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md">
           <div className="relative h-48 overflow-hidden">
             <Image
               src={project.image}
@@ -124,9 +51,11 @@ export function ProjectShowcase() {
             </div>
           </CardContent>
           <CardFooter className="px-6 pb-6 pt-0 border-t border-transparent group-hover:border-primary/10 transition-colors">
-             <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80 font-semibold flex items-center gap-1">
+            <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80 font-semibold flex items-center gap-1" asChild>
+              <Link href={`/projects/${project.slug}`}>
                 Ver Detalles <ArrowUpRight className="w-4 h-4" />
-             </Button>
+              </Link>
+            </Button>
           </CardFooter>
         </Card>
       ))}

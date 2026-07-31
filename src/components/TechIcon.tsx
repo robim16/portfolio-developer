@@ -37,6 +37,7 @@ const techMap: Record<string, { icon: React.ReactNode; color: string }> = {
   'Claude': { icon: <Cpu className="w-4 h-4" />, color: 'bg-orange-400' },
   'Gemini': { icon: <Zap className="w-4 h-4" />, color: 'bg-blue-500' },
   'ChatGPT': { icon: <Globe className="w-4 h-4" />, color: 'bg-emerald-500' },
+  'Tailwind': { icon: <Layout className="w-4 h-4" />, color: 'bg-cyan-500' },
 };
 
 export function TechIcon({ tech, showLabel = true }: { tech: string; showLabel?: boolean }) {
