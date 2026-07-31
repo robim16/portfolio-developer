@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   ArrowLeft,
-  ExternalLink,
   Github,
   Layers,
   Box,
@@ -22,8 +21,8 @@ interface ProjectDetailProps {
 export function ProjectDetail({ project }: ProjectDetailProps) {
   return (
     <article className="animate-in fade-in slide-in-from-bottom-4 duration-700">
-      {/* Hero */}
-      <div className="relative h-[40vh] md:h-[50vh] overflow-hidden">
+      {/* Hero image */}
+      <div className="relative h-[30vh] md:h-[40vh] overflow-hidden">
         <Image
           src={project.image}
           alt={project.title}
@@ -32,57 +31,39 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
           className="object-cover"
           data-ai-hint={project.hint}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
-          <div className="container mx-auto max-w-6xl">
-            <Link
-              href="/#projects"
-              className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-accent transition-colors mb-6"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Volver a proyectos
-            </Link>
-            <h1 className="text-4xl md:text-6xl font-headline font-black tracking-tight mb-4">
-              {project.title}
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-3 mt-6">
-              {project.techs.map((tech) => (
-                <TechIcon key={tech} tech={tech} />
-              ))}
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 to-background" />
       </div>
 
-      {/* Content */}
-      <div className="container mx-auto max-w-6xl px-4 py-16 space-y-20">
-        {/* Overview + CTAs */}
-        <section className="grid md:grid-cols-3 gap-12">
-          <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-sm">
-              <Cpu className="w-4 h-4" /> Resumen
+      {/* Header — solid background for readability */}
+      <div className="bg-background border-b border-primary/10">
+        <div className="container mx-auto max-w-6xl px-4 py-10 md:py-14 space-y-6">
+          <Link
+            href="/#projects"
+            className="inline-flex items-center gap-2 text-sm font-bold text-muted-foreground hover:text-accent transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Volver a proyectos
+          </Link>
+
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+            <div className="space-y-4 flex-1">
+              <h1 className="text-4xl md:text-5xl font-headline font-black tracking-tight">
+                {project.title}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                {project.techs.map((tech) => (
+                  <TechIcon key={tech} tech={tech} />
+                ))}
+              </div>
             </div>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              {project.overview}
-            </p>
-          </div>
-          <div className="flex flex-col gap-3">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground font-bold rounded-xl h-12"
-              asChild
-            >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" /> Ver Demo
-              </a>
-            </Button>
+
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-primary/20 font-bold rounded-xl h-12"
+              className="border-2 border-primary/20 font-bold rounded-xl h-12 shrink-0"
               asChild
             >
               <a href={project.repo} target="_blank" rel="noopener noreferrer">
@@ -90,6 +71,19 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               </a>
             </Button>
           </div>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="container mx-auto max-w-6xl px-4 py-16 space-y-20">
+        {/* Overview */}
+        <section className="space-y-4">
+          <div className="flex items-center gap-2 text-accent font-bold uppercase tracking-widest text-sm">
+            <Cpu className="w-4 h-4" /> Resumen
+          </div>
+          <p className="text-lg leading-relaxed text-muted-foreground max-w-4xl">
+            {project.overview}
+          </p>
         </section>
 
         <Separator className="bg-primary/10" />

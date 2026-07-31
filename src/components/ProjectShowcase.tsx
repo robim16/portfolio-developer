@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { Github, ArrowUpRight } from 'lucide-react';
 import { TechIcon } from './TechIcon';
 import { projects } from '@/lib/projects';
 
@@ -15,26 +15,21 @@ export function ProjectShowcase() {
       {projects.map((project) => (
         <Card key={project.slug} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-white/80 backdrop-blur-md">
           <div className="relative h-48 overflow-hidden">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-              data-ai-hint={project.hint}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-              <div className="flex gap-2">
-                <Button variant="secondary" size="sm" asChild>
-                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                    <Github className="w-4 h-4" /> Código
-                  </a>
-                </Button>
-                <Button variant="default" size="sm" className="bg-primary text-primary-foreground" asChild>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                    <ExternalLink className="w-4 h-4" /> Demo
-                  </a>
-                </Button>
-              </div>
+            <Link href={`/projects/${project.slug}`} className="absolute inset-0 z-0">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                data-ai-hint={project.hint}
+              />
+            </Link>
+            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 pointer-events-none">
+              <Button variant="secondary" size="sm" className="pointer-events-auto" asChild>
+                <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                  <Github className="w-4 h-4" /> Código
+                </a>
+              </Button>
             </div>
           </div>
           <CardContent className="p-6">
