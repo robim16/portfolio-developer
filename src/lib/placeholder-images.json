@@ -63,13 +63,13 @@
     {
       "id": "project-reactive-commerce",
       "description": "ReactiveCommerce Backend Microservices",
-      "imageUrl": "https://picsum.photos/seed/reactive-commerce/600/400",
+      "imageUrl": "/projects/project-reactive-commerce.png",
       "imageHint": "cloud server"
     },
     {
       "id": "project-nexo",
       "description": "Nexo Vue Firebase Fullstack",
-      "imageUrl": "https://picsum.photos/seed/nexo-vue/600/400",
+      "imageUrl": "/projects/project-nexo.png",
       "imageHint": "web development"
     }
   ]
