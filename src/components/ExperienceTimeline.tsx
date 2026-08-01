@@ -8,20 +8,30 @@ import { Briefcase, Calendar, MapPin, Code, Cpu, Database, Sparkles } from 'luci
 
 const experiences = [
   {
-    company: 'Cosmmotech',
-    role: 'Desarrollador Fullstack Senior',
-    period: '2022 - Presente',
-    location: 'Remoto',
-    description: 'Liderando el desarrollo de arquitecturas web modulares e integrando flujos de trabajo de IA para optimizar la productividad de los desarrolladores.',
-    skills: ['Next', 'Nestjs', 'PostgreSQL', 'Claude']
+    company: 'Cosmmotech SAS',
+    role: 'Desarrollador Fullstack',
+    period: 'agosto de 2024 - octubre de 2024',
+    location: 'Montería, Colombia',
+    description: 'Apoyo al lanzamiento del proyecto "Revista Margen".' +
+     'Tareas realizadas: - Diseño responsivo para mobile y desktop - Opciones para comentar y compartir en redes sociales. Reducción del tiempo de carga de la página en un 30%.' +
+     'Corrección de errores y mejoras en la usabilidad de la página.',
+    skills: ['Laravel', 'Vue', 'PostgreSQL', 'CSS', 'HTML', 'JavaScript']
   },
   {
     company: 'DyD Soluciones',
     role: 'Desarrollador Fullstack',
-    period: '2020 - 2022',
-    location: 'Híbrido',
-    description: 'Desarrollo de sistemas backend escalables para la gestión logística utilizando Laravel y Vue, reduciendo los costos operativos en un 20%.',
-    skills: ['Laravel', 'Vue', 'PostgreSQL', '.Net']
+    period: 'diciembre de 2021 - diciembre de 2023',
+    location: 'Montería, Colombia',
+    description: 'Desarrollo de funcionalidades y soporte al software administrativo y contable Finante.' +
+    'Tareas realizadas: - Mejoras en el módulo de terceros.' +
+    ' - Creación de nuevos informes y correcciones en informes existentes.' +
+    ' - Validaciones más estrictas en cargue de resolucioes de facturación de la DIAN.' +
+    ' - Diágnostico y corrección de errores asociados al uso de sintaxis y librerías deprecadas.' +
+    ' - Diágnostico de errores asociados a falta de control de concurrencia en la base de datos.' +
+    ' - Mejoras en el módulo de nómina.' +
+    ' - Reducción en el número de tickets(70%) abiertos por usuarios debidos a errores en la aplicación.' +
+    ' - Desarrollo de cargue masivo vía excel para el módulo de nómina.',
+    skills: ['Laravel', 'JavaScript', 'PostgreSQL', 'Bootstrap', 'HTML', 'CSS']
   }
 ];
 
@@ -29,7 +39,7 @@ const skillCategories = [
   { 
     name: 'Lenguajes y Frameworks', 
     icon: <Code className="w-5 h-5" />, 
-    items: ['Laravel', 'Vue', 'Spring', 'Angular', 'Next', 'Django', '.Net', 'Nestjs', 'React'] 
+    items: ['Laravel', 'Vue', 'Spring', 'Angular', 'Next', 'Django', '.Net', 'Nestjs', 'React', 'Node.js'] 
   },
   { 
     name: 'Bases de Datos', 
