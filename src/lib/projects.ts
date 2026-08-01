@@ -26,6 +26,82 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: 'reactive-commerce-backend',
+    title: 'ReactiveCommerce Backend',
+    description:
+      'Marketplace de assets digitales construido sobre arquitectura de microservicios reactivos con Spring WebFlux, AWS y Docker.',
+    overview:
+      'Plataforma backend reactiva no bloqueante para un marketplace de assets digitales. Integra 11 microservicios con comunicación asíncrona vía Kafka, persistencia híbrida (PostgreSQL R2DBC, MongoDB, DynamoDB) e infraestructura cloud en AWS.',
+    techs: ['Spring', 'Docker', 'PostgreSQL'],
+    stack: [
+      { category: 'Backend', items: ['Java 21', 'Spring Boot 3.3', 'Spring WebFlux', 'Spring Cloud Gateway'] },
+      { category: 'Persistencia', items: ['R2DBC + PostgreSQL', 'MongoDB Reactive', 'Redis Reactive', 'DynamoDB'] },
+      { category: 'Mensajería', items: ['Reactor Kafka', 'Event Sourcing', 'Saga coreografiada'] },
+      { category: 'Cloud & DevOps', items: ['AWS S3/SES/SQS', 'Docker Compose', 'Prometheus', 'Grafana', 'Zipkin'] },
+    ],
+    architecture: {
+      pattern: 'Microservicios reactivos + Hexagonal',
+      description:
+        'Cada servicio sigue arquitectura hexagonal con RouterFunction y HandlerFunction (estilo Bancolombia). El API Gateway centraliza autenticación JWT, rate limiting y enrutamiento. Los flujos de compra se orquestan por coreografía de eventos Kafka.',
+      components: [
+        { name: 'API Gateway', role: 'Punto de entrada único con JWT y rate limiting' },
+        { name: 'Auth Service', role: 'Registro, login, JWT y OAuth2' },
+        { name: 'Order + Payment', role: 'Saga de compra con Event Sourcing y Circuit Breaker' },
+        { name: 'Notification Service', role: 'SSE en tiempo real y emails vía AWS SES' },
+      ],
+    },
+    features: [
+      '11 microservicios con service discovery (Eureka) y config centralizada',
+      'Stack 100% reactivo con WebFlux, R2DBC y Reactor Kafka',
+      'Saga de compra coreografiada con manejo de fallos de pago',
+      'Tokens de descarga seguros con TTL en DynamoDB',
+      'Resiliencia con Circuit Breaker, Retry y Bulkhead (Resilience4j)',
+      'Observabilidad completa: Prometheus, Grafana, Zipkin y Loki',
+    ],
+    image: 'https://picsum.photos/seed/reactive-commerce/600/400',
+    hint: 'cloud server',
+    link: '#',
+    repo: 'https://github.com/robim16/reactive-commerce-backend',
+  },
+  {
+    slug: 'nexo',
+    title: 'Nexo',
+    description:
+      'Aplicación fullstack con Vue 3 y Firebase que implementa arquitectura limpia, patrones de diseño y buenas prácticas de desarrollo.',
+    overview:
+      'Nexo es una plataforma fullstack moderna construida con Vue 3 en el frontend y Firebase como backend serverless. Aplica principios de arquitectura limpia para mantener el código desacoplado, testeable y escalable.',
+    techs: ['Vue', 'Tailwind'],
+    stack: [
+      { category: 'Frontend', items: ['Vue 3', 'Composition API', 'Pinia', 'Vue Router'] },
+      { category: 'Backend', items: ['Firebase Auth', 'Firestore', 'Cloud Functions', 'Cloud Storage'] },
+      { category: 'Estilos', items: ['Tailwind CSS', 'Componentes reutilizables'] },
+      { category: 'Patrones', items: ['Arquitectura limpia', 'Repository pattern', 'Dependency injection'] },
+    ],
+    architecture: {
+      pattern: 'Arquitectura limpia + Firebase serverless',
+      description:
+        'Separación en capas de dominio, casos de uso e infraestructura. Firebase provee autenticación, base de datos en tiempo real y almacenamiento sin servidor dedicado, permitiendo despliegue ágil y escalado automático.',
+      components: [
+        { name: 'Vue 3 SPA', role: 'Interfaz reactiva con Composition API y estado global' },
+        { name: 'Firebase Auth', role: 'Autenticación y gestión de sesiones' },
+        { name: 'Firestore', role: 'Base de datos NoSQL en tiempo real' },
+        { name: 'Cloud Functions', role: 'Lógica de negocio serverless' },
+      ],
+    },
+    features: [
+      'Frontend reactivo con Vue 3 y Composition API',
+      'Autenticación y autorización con Firebase Auth',
+      'Persistencia en tiempo real con Firestore',
+      'Arquitectura limpia con separación de responsabilidades',
+      'Patrones de diseño aplicados (Repository, Factory, Observer)',
+      'UI responsiva con Tailwind CSS',
+    ],
+    image: 'https://picsum.photos/seed/nexo-vue/600/400',
+    hint: 'web development',
+    link: '#',
+    repo: 'https://github.com/robim16/nexo',
+  },
+  {
     slug: 'technova-ecommerce',
     title: 'TechNova E-commerce',
     description:

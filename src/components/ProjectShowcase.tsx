@@ -24,13 +24,15 @@ export function ProjectShowcase() {
                 data-ai-hint={project.hint}
               />
             </Link>
-            <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 pointer-events-none">
-              <Button variant="secondary" size="sm" className="pointer-events-auto" asChild>
-                <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                  <Github className="w-4 h-4" /> Código
-                </a>
-              </Button>
-            </div>
+            {project.repo && project.repo !== '#' && (
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 pointer-events-none">
+                <Button variant="secondary" size="sm" className="pointer-events-auto" asChild>
+                  <a href={project.repo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                    <Github className="w-4 h-4" /> Ver Código
+                  </a>
+                </Button>
+              </div>
+            )}
           </div>
           <CardContent className="p-6">
             <h3 className="text-xl font-headline font-bold mb-2 group-hover:text-accent transition-colors">

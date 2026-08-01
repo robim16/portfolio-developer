@@ -59,6 +59,18 @@
       "description": "Social Book Django",
       "imageUrl": "https://picsum.photos/seed/django-social/600/400",
       "imageHint": "social network"
+    },
+    {
+      "id": "project-reactive-commerce",
+      "description": "ReactiveCommerce Backend Microservices",
+      "imageUrl": "https://picsum.photos/seed/reactive-commerce/600/400",
+      "imageHint": "cloud server"
+    },
+    {
+      "id": "project-nexo",
+      "description": "Nexo Vue Firebase Fullstack",
+      "imageUrl": "https://picsum.photos/seed/nexo-vue/600/400",
+      "imageHint": "web development"
     }
   ]
 }

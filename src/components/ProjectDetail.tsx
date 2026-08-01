@@ -60,16 +60,18 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
               </div>
             </div>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-primary/20 font-bold rounded-xl h-12 shrink-0"
-              asChild
-            >
-              <a href={project.repo} target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4 mr-2" /> Ver Código
-              </a>
-            </Button>
+            {project.repo && project.repo !== '#' && (
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary/20 font-bold rounded-xl h-12 shrink-0"
+                asChild
+              >
+                <a href={project.repo} target="_blank" rel="noopener noreferrer">
+                  <Github className="w-4 h-4 mr-2" /> Ver Código
+                </a>
+              </Button>
+            )}
           </div>
         </div>
       </div>
