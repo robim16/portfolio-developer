@@ -56,7 +56,7 @@ export default function Home() {
               </h2>
             </div>
             <Button variant="link" className="text-primary font-bold text-lg group p-0" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/robim16" target="_blank" rel="noopener noreferrer">
                 Ver todos en GitHub <ExternalLink className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </a>
             </Button>
@@ -105,8 +105,8 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Github className="w-6 h-6" /></a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="w-6 h-6" /></a>
+            <a href="https://github.com/robim16" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Github className="w-6 h-6" /></a>
+            <a href="https://www.linkedin.com/in/carteagajimenez/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors"><Linkedin className="w-6 h-6" /></a>
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors"><Twitter className="w-6 h-6" /></a>
           </div>
         </div>

@@ -33,12 +33,12 @@ export function ContactSection() {
           
           <div className="flex gap-4">
             {[
-              { icon: <Github />, label: 'Github', href: '#' },
-              { icon: <Linkedin />, label: 'LinkedIn', href: '#' },
+              { icon: <Github />, label: 'Github', href: 'https://github.com/robim16' },
+              { icon: <Linkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/carteagajimenez/' },
               { icon: <Twitter />, label: 'Twitter', href: '#' }
             ].map((social, idx) => (
               <Button key={idx} variant="outline" size="icon" className="w-12 h-12 rounded-full border-primary/20 hover:bg-primary hover:border-primary hover:text-primary-foreground transition-all" asChild>
-                <a href={social.href} aria-label={social.label}>{social.icon}</a>
+                <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>{social.icon}</a>
               </Button>
             ))}
           </div>
