@@ -39,6 +39,7 @@ const techMap: Record<string, { icon: React.ReactNode; color: string }> = {
   'ChatGPT': { icon: <Globe className="w-4 h-4" />, color: 'bg-emerald-500' },
   'Tailwind': { icon: <Layout className="w-4 h-4" />, color: 'bg-cyan-500' },
   'Blazor': { icon: <Globe className="w-4 h-4" />, color: 'bg-purple-600' },
+  'Azure': { icon: <Cloud className="w-4 h-4" />, color: 'bg-blue-500' },
 };
 
 export function TechIcon({ tech, showLabel = true }: { tech: string; showLabel?: boolean }) {

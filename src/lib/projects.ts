@@ -140,6 +140,44 @@ export const projects: Project[] = [
     repo: 'https://github.com/robim16/ShopOnlineBlazor',
   },
   {
+    slug: 'lsc-smartcertify-api',
+    title: 'LSC SmartCertify API',
+    description:
+      'API REST para plataforma de certificación en línea con gestión de cursos, exámenes, preguntas y usuarios, integrada con Azure AD B2C y Microsoft Graph.',
+    overview:
+      'Backend empresarial en ASP.NET Core 9 organizado en capas (Domain, Application, Infrastructure, API). Administra el ciclo completo de certificación: cursos, bancos de preguntas, exámenes con seguimiento de respuestas y perfiles de usuario. Integra autenticación Azure AD B2C, Microsoft Graph y observabilidad con Serilog y Application Insights.',
+    techs: ['.Net', 'SQL Server', 'Azure'],
+    stack: [
+      { category: 'Backend', items: ['ASP.NET Core 9', 'Web API', 'FluentValidation', 'AutoMapper'] },
+      { category: 'Base de datos', items: ['SQL Server', 'Entity Framework Core', 'Retry on failure'] },
+      { category: 'Cloud & Auth', items: ['Azure AD B2C', 'Microsoft Identity', 'Microsoft Graph', 'Application Insights'] },
+      { category: 'Observabilidad', items: ['Serilog', 'Request/Response logging', 'Scalar OpenAPI', 'Global exception handling'] },
+    ],
+    architecture: {
+      pattern: 'Clean Architecture en capas',
+      description:
+        'Cuatro proyectos desacoplados: Domain (entidades), Application (servicios, DTOs, validadores), Infrastructure (repositorios EF Core, background services) y API (controllers, middlewares, filtros). Los servicios de aplicación orquestan la lógica de certificación mientras los repositorios abstraen la persistencia.',
+      components: [
+        { name: 'API Layer', role: 'Controllers REST, middlewares de logging y filtros de validación' },
+        { name: 'Application Layer', role: 'Servicios de cursos, exámenes, preguntas y perfiles de usuario' },
+        { name: 'Infrastructure', role: 'EF Core, repositorios y background services de notificaciones' },
+        { name: 'Azure AD B2C', role: 'Autenticación JWT y onboarding de usuarios vía Microsoft Graph' },
+      ],
+    },
+    features: [
+      'CRUD de cursos con validación FluentValidation y roles de admin',
+      'Gestión de preguntas, opciones y exámenes por curso',
+      'Flujo de examen: inicio, respuestas del usuario y finalización',
+      'Autenticación con Azure AD B2C y claims de usuario',
+      'Background services para notificaciones y onboarding',
+      'Documentación OpenAPI con Scalar y logging estructurado con Serilog',
+    ],
+    image: '/projects/project-lsc-smartcertify.png',
+    hint: 'certification platform',
+    link: '#',
+    repo: 'https://github.com/robim16/LSC.SmartCertify.API',
+  },
+  {
     slug: 'technova-ecommerce',
     title: 'TechNova E-commerce',
     description:

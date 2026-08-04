@@ -77,6 +77,12 @@
       "description": "ShopOnline Blazor WebAssembly ASP.NET Core",
       "imageUrl": "/projects/project-shop-online-blazor.png",
       "imageHint": "ecommerce shop"
+    },
+    {
+      "id": "project-lsc-smartcertify",
+      "description": "LSC SmartCertify API ASP.NET Core Azure",
+      "imageUrl": "/projects/project-lsc-smartcertify.png",
+      "imageHint": "certification platform"
     }
   ]
 }
