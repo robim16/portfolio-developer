@@ -102,6 +102,44 @@ export const projects: Project[] = [
     repo: 'https://github.com/robim16/nexo',
   },
   {
+    slug: 'shop-online-blazor',
+    title: 'ShopOnline Blazor',
+    description:
+      'Tienda en línea fullstack con Blazor WebAssembly en el frontend y ASP.NET Core Web API en el backend, con catálogo, carrito y checkout.',
+    overview:
+      'Solución e-commerce desacoplada donde Blazor WebAssembly consume una API REST en ASP.NET Core. Entity Framework Core persiste productos, categorías y carritos en SQL Server, con DTOs compartidos y patrón Repository para separar la lógica de acceso a datos.',
+    techs: ['Blazor', '.Net', 'SQL Server'],
+    stack: [
+      { category: 'Frontend', items: ['Blazor WebAssembly', 'Razor Components', 'HttpClient', 'CSS scoped'] },
+      { category: 'Backend', items: ['ASP.NET Core 6', 'Web API', 'Entity Framework Core', 'Swagger'] },
+      { category: 'Base de datos', items: ['SQL Server', 'EF Core Migrations', 'DbContext pooling'] },
+      { category: 'Arquitectura', items: ['Repository pattern', 'DTOs compartidos', 'CORS configurado'] },
+    ],
+    architecture: {
+      pattern: 'Cliente-servidor desacoplado + Repository',
+      description:
+        'Tres proyectos en solución: ShopOnline.Web (Blazor WASM) consume ShopOnline.Api vía HttpClient. ShopOnline.Models comparte DTOs entre capas. Los repositorios abstraen el acceso a EF Core y los controllers exponen endpoints REST para productos y carrito.',
+      components: [
+        { name: 'Blazor WebAssembly', role: 'SPA con páginas de catálogo, detalle, carrito y checkout' },
+        { name: 'Web API', role: 'Controllers REST para productos y carrito de compras' },
+        { name: 'Entity Framework Core', role: 'ORM con migraciones y DbContext pool sobre SQL Server' },
+        { name: 'ShopOnline.Models', role: 'DTOs compartidos entre frontend y backend' },
+      ],
+    },
+    features: [
+      'Catálogo de productos con filtrado por categoría',
+      'Página de detalle de producto con agregar al carrito',
+      'Carrito de compras con actualización de cantidades',
+      'Flujo de checkout con resumen de pedido',
+      'API documentada con Swagger en entorno de desarrollo',
+      'Componentes reutilizables con code-behind (Base classes)',
+    ],
+    image: '/projects/project-shop-online-blazor.png',
+    hint: 'ecommerce shop',
+    link: '#',
+    repo: 'https://github.com/robim16/ShopOnlineBlazor',
+  },
+  {
     slug: 'technova-ecommerce',
     title: 'TechNova E-commerce',
     description:

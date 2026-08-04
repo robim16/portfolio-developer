@@ -71,6 +71,12 @@
       "description": "Nexo Vue Firebase Fullstack",
       "imageUrl": "/projects/project-nexo.png",
       "imageHint": "web development"
+    },
+    {
+      "id": "project-shop-online-blazor",
+      "description": "ShopOnline Blazor WebAssembly ASP.NET Core",
+      "imageUrl": "/projects/project-shop-online-blazor.png",
+      "imageHint": "ecommerce shop"
     }
   ]
 }
